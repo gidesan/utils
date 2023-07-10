@@ -1,0 +1,47 @@
+{
+  "name": "@gidesan/utils",
+  "version": "0.0.1",
+  "author": "Giuseppe de Santis <gdesantis@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gidesan/utils.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.11.0",
+    "pnpm": ">=7.1.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@swc/core": "^1.3.68",
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "@types/node": "^20.4.1",
+    "@types/prettier": "^2.7.3",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.44.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-unicorn": "^47.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.2",
+    "vitest": "^0.33.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite dev",
+    "format": "prettier --write .",
+    "lint:format": "prettier --cache --check .",
+    "lint": "eslint --cache .",
+    "test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
+    "tsc:check": "tsc",
+    "vitest:run": "vitest run"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ]
+}
